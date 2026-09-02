@@ -24,10 +24,11 @@ export function Hero() {
     };
   }, []);
 
-  const step = (i: number) =>
+  const step = () =>
     `opacity-0 translate-y-6 transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
       mounted ? "!opacity-100 !translate-y-0" : ""
-    }`.replace("duration-[900ms]", `duration-[900ms] delay-[${i}ms]`);
+    }`;
+
 
   return (
     <section id="top" className="relative isolate flex min-h-[92svh] items-end overflow-hidden">
