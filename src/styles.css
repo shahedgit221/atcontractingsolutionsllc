@@ -205,7 +205,25 @@
   color: var(--purple-soft);
 }
 
+/* Slow ambient glow pulse */
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.28;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+@utility animate-pulse-slow {
+  animation: pulse-slow 9s var(--ease-premium) infinite;
+}
+
 /* Scroll reveal */
+
 @utility reveal {
   opacity: 0;
   transform: translate3d(0, 28px, 0);
